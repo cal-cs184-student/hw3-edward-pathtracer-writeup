@@ -1,0 +1,1151 @@
+=== pathtracer -t 12 -s 1024 -l 4 -m 5 -r 480 360 -f docs/images/part4_gi_bunny_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x10124eb80 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x101250af0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1012512c0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x101251390 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x101251120 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x101250ec0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x101251dd0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0007 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0089 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 652651101 rays.
+[PathTracer] Average speed 4.1305 million rays per second.
+[PathTracer] Averaged 6.739271 intersection tests per ray.
+[PathTracer] Job completed.
+real 158.13
+user 1835.82
+sys 3.07
+=== pathtracer -t 12 -s 1024 -l 4 -m 5 -r 480 360 -f docs/images/part4_gi_spheres_1024.png dae/sky/CBspheres_lambertian.dae ===
+[PathTracer] Input scene file: dae/sky/CBspheres_lambertian.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: Sphere1 (id:Sphere1)
+[COLLADA Parser]   |- Sphere: Sphere1 (id:Sphere1-data) [ radius=0.3 ]
+[COLLADA Parser]   |- MaterialInfo: refract (id:refract) [ BSDF=0x104f0ac50 ]
+[COLLADA Parser]  |- Node: Sphere2 (id:Sphere2)
+[COLLADA Parser]   |- Sphere: Sphere1 (id:Sphere1-data) [ radius=0.3 ]
+[COLLADA Parser]   |- MaterialInfo: lambertian (id:lambertian) [ BSDF=0x104f0ae50 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=37.8493 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x104f0b1b0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x104f0d590 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x104f0b2c0 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x104f0b090 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x104f0e5e0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x104f0d920 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0000 sec)
+[PathTracer] Building BVH from 14 primitives... Done! (0.0000 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 271937429 rays.
+[PathTracer] Average speed 2.8353 million rays per second.
+[PathTracer] Averaged 11.830412 intersection tests per ray.
+[PathTracer] Job completed.
+real 95.93
+user 1126.39
+sys 1.68
+=== pathtracer -t 12 -s 1024 -l 4 -m 5 -r 480 480 -f docs/images/part4_gi_dragon_1024.png dae/sky/dragon.dae ===
+[PathTracer] Input scene file: dae/sky/dragon.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Hemi (id:Hemi)
+[COLLADA Parser]   |- LightInfo: Hemi (id:Hemi-light) [ type=ambient spectrum=(1,1,1) ]
+[COLLADA Parser]  |- Node: Area_001 (id:Area_001)
+[COLLADA Parser]   |- LightInfo: Light (id:Area_001-light) [ type=directional spectrum=(1,1,1) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera.001 (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: dragon (id:dragon)
+[COLLADA Parser]   |- PolymeshInfo: dragon (id:dragon-mesh) [ num_polygons=100000 num_vertices=50000 num_normals=100000 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: dragon (id:dragon-material) [ BSDF=0x105282cc0 ]
+[COLLADA Parser]  |- Node: Cube (id:Cube)
+[COLLADA Parser]   |- PolymeshInfo: Cube (id:Cube-mesh) [ num_polygons=5120 num_vertices=2562 num_normals=5120 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: pedestal (id:pedestal-material) [ BSDF=0x105284e00 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0027 sec)
+[PathTracer] Building BVH from 105120 primitives... Done! (0.0403 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 242342458 rays.
+[PathTracer] Average speed 4.7339 million rays per second.
+[PathTracer] Averaged 6.820497 intersection tests per ray.
+[PathTracer] Job completed.
+real 51.56
+user 601.02
+sys 0.81
+=== pathtracer -t 12 -s 1024 -l 4 -m 1 -o 1 -r 480 360 -f docs/images/part4_bunny_direct_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x1034aeba0 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1034b19d0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1034b22c0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1034b1ee0 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1034b1dc0 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1034b1e00 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1034b2b00 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0007 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 190497578 rays.
+[PathTracer] Average speed 3.7569 million rays per second.
+[PathTracer] Averaged 9.527830 intersection tests per ray.
+[PathTracer] Job completed.
+real 50.82
+user 590.18
+sys 0.77
+=== pathtracer -t 12 -s 1024 -l 4 -m 5 -o 1 -I -r 480 360 -f docs/images/part4_bunny_indirect_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x104e2ea60 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x104e319a0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x104e319e0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x104e32350 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x104e31e80 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x104e31ec0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x104e32040 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 463792656 rays.
+[PathTracer] Average speed 4.2475 million rays per second.
+[PathTracer] Averaged 7.013501 intersection tests per ray.
+[PathTracer] Job completed.
+real 109.57
+user 1256.02
+sys 3.46
+=== pathtracer -t 12 -s 1024 -l 4 -m 0 -o 0 -R 0 -r 480 360 -f docs/images/part4_bunny_isolated_m0_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x10381f040 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1038215c0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x103821600 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x103821b20 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x103822690 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x103822580 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x103822a90 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0009 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0110 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 40354961 rays.
+[PathTracer] Average speed 3.7482 million rays per second.
+[PathTracer] Averaged 10.561104 intersection tests per ray.
+[PathTracer] Job completed.
+real 10.92
+user 126.29
+sys 0.11
+=== pathtracer -t 12 -s 1024 -l 4 -m 0 -o 1 -R 0 -r 480 360 -f docs/images/part4_bunny_accum_m0_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x1031aaf60 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1031acba0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1031acd40 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1031ad430 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1031ad160 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1031aded0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1031acf80 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0098 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 42319640 rays.
+[PathTracer] Average speed 3.8490 million rays per second.
+[PathTracer] Averaged 10.003238 intersection tests per ray.
+[PathTracer] Job completed.
+real 11.09
+user 129.02
+sys 0.25
+=== pathtracer -t 12 -s 1024 -l 4 -m 1 -o 0 -R 0 -r 480 360 -f docs/images/part4_bunny_isolated_m1_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x103162c20 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x103165ad0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1031663c0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x103165fe0 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x103165f00 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x103166bc0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x103166e90 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0009 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0098 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 183734968 rays.
+[PathTracer] Average speed 3.6551 million rays per second.
+[PathTracer] Averaged 9.928695 intersection tests per ray.
+[PathTracer] Job completed.
+real 50.39
+user 594.10
+sys 0.41
+=== pathtracer -t 12 -s 1024 -l 4 -m 1 -o 1 -R 0 -r 480 360 -f docs/images/part4_bunny_accum_m1_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x103447040 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x103447300 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x103447480 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x103448c00 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x103448640 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1034497e0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x103448900 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 164499756 rays.
+[PathTracer] Average speed 2.8967 million rays per second.
+[PathTracer] Averaged 11.741977 intersection tests per ray.
+[PathTracer] Job completed.
+real 56.90
+user 664.50
+sys 1.01
+=== pathtracer -t 12 -s 1024 -l 4 -m 2 -o 0 -R 0 -r 480 360 -f docs/images/part4_bunny_isolated_m2_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x105a33040 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x105a355c0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x105a35600 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x105a35b20 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x105a36690 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x105a36580 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x105a36a90 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0095 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 215855403 rays.
+[PathTracer] Average speed 3.1975 million rays per second.
+[PathTracer] Averaged 8.630186 intersection tests per ray.
+[PathTracer] Job completed.
+real 67.62
+user 770.21
+sys 4.39
+=== pathtracer -t 12 -s 1024 -l 4 -m 2 -o 1 -R 0 -r 480 360 -f docs/images/part4_bunny_accum_m2_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x1039b2a80 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1039b3330 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1039b49e0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1039b4900 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1039b4820 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1039b4c00 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1039b5420 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0010 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0100 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 429169536 rays.
+[PathTracer] Average speed 4.0051 million rays per second.
+[PathTracer] Averaged 6.954892 intersection tests per ray.
+[PathTracer] Job completed.
+real 107.29
+user 1233.70
+sys 6.30
+=== pathtracer -t 12 -s 1024 -l 4 -m 3 -o 0 -R 0 -r 480 360 -f docs/images/part4_bunny_isolated_m3_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x10178ef80 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x10178f440 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x10178f280 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x101790c40 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1017908c0 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1017917c0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1017916f0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0007 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 240646432 rays.
+[PathTracer] Average speed 3.4225 million rays per second.
+[PathTracer] Averaged 8.386871 intersection tests per ray.
+[PathTracer] Job completed.
+real 70.42
+user 827.58
+sys 0.62
+=== pathtracer -t 12 -s 1024 -l 4 -m 3 -o 1 -R 0 -r 480 360 -f docs/images/part4_bunny_accum_m3_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x102da3020 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x102da55c0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x102da5600 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x102da5e90 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x102da5ed0 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x102da6760 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x102da6a30 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 585563146 rays.
+[PathTracer] Average speed 4.1001 million rays per second.
+[PathTracer] Averaged 7.265328 intersection tests per ray.
+[PathTracer] Job completed.
+real 142.93
+user 1629.70
+sys 4.98
+=== pathtracer -t 12 -s 1024 -l 4 -m 4 -o 0 -R 0 -r 480 360 -f docs/images/part4_bunny_isolated_m4_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x104f3ec40 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x104f418e0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x104f41920 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x104f42290 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x104f41d80 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x104f41e00 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x104f41f80 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 313125023 rays.
+[PathTracer] Average speed 4.2360 million rays per second.
+[PathTracer] Averaged 6.709241 intersection tests per ray.
+[PathTracer] Job completed.
+real 74.04
+user 862.90
+sys 1.23
+=== pathtracer -t 12 -s 1024 -l 4 -m 4 -o 1 -R 0 -r 480 360 -f docs/images/part4_bunny_accum_m4_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x1052f3040 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1052f55c0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1052f5600 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1052f5a70 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1052f5b30 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1052f5b70 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1052f6980 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0093 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 728270939 rays.
+[PathTracer] Average speed 2.7320 million rays per second.
+[PathTracer] Averaged 7.309192 intersection tests per ray.
+[PathTracer] Job completed.
+real 266.68
+user 2107.99
+sys 2.62
+=== pathtracer -t 12 -s 1024 -l 4 -m 5 -o 0 -R 0 -r 480 360 -f docs/images/part4_bunny_isolated_m5_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x100dc7020 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x100dc95c0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x100dc9600 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x100dc9a40 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x100dc9b00 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x100dc9b40 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x100dca950 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 343961742 rays.
+[PathTracer] Average speed 0.4658 million rays per second.
+[PathTracer] Averaged 7.079051 intersection tests per ray.
+[PathTracer] Job completed.
+real 738.50
+user 944.03
+sys 3.14
+=== pathtracer -t 12 -s 1024 -l 4 -m 5 -o 1 -R 0 -r 480 360 -f docs/images/part4_bunny_accum_m5_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x10544ec20 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x105451a50 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x105452340 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x105451f60 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x105451e40 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x105451e80 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x105452b80 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 915228040 rays.
+[PathTracer] Average speed 4.1562 million rays per second.
+[PathTracer] Averaged 6.615584 intersection tests per ray.
+[PathTracer] Job completed.
+real 220.33
+user 2526.46
+sys 7.54
+=== pathtracer -t 12 -s 1024 -l 4 -m 0 -o 1 -R 1 -r 480 360 -f docs/images/part4_bunny_rr_m0_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x102fb2c20 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x102fb3050 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x102fb3090 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x102fb5780 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x102fb63c0 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x102fb3260 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x102fb32a0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0095 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 39867115 rays.
+[PathTracer] Average speed 3.4017 million rays per second.
+[PathTracer] Averaged 9.243350 intersection tests per ray.
+[PathTracer] Job completed.
+real 11.82
+user 138.87
+sys 0.12
+=== pathtracer -t 12 -s 1024 -l 4 -m 1 -o 1 -R 1 -r 480 360 -f docs/images/part4_bunny_rr_m1_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x10147eae0 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x101481a20 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x101481a60 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1014823d0 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x101481f00 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x101481f40 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1014820c0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0102 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 191957272 rays.
+[PathTracer] Average speed 3.5003 million rays per second.
+[PathTracer] Averaged 9.303814 intersection tests per ray.
+[PathTracer] Job completed.
+real 54.96
+user 645.78
+sys 0.50
+=== pathtracer -t 12 -s 1024 -l 4 -m 2 -o 1 -R 1 -r 480 360 -f docs/images/part4_bunny_rr_m2_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x105b76f80 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x105b771d0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x105b77410 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x105b77490 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x105b78840 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x105b78880 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x105b79620 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 322204228 rays.
+[PathTracer] Average speed 2.9491 million rays per second.
+[PathTracer] Averaged 9.619999 intersection tests per ray.
+[PathTracer] Job completed.
+real 109.38
+user 1286.55
+sys 1.07
+=== pathtracer -t 12 -s 1024 -l 4 -m 3 -o 1 -R 1 -r 480 360 -f docs/images/part4_bunny_rr_m3_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x10173af60 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x10173cba0 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x10173cbe0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x10173d100 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x10173cd80 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x10173cfc0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x10173e0c0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 493887834 rays.
+[PathTracer] Average speed 3.9664 million rays per second.
+[PathTracer] Averaged 7.547299 intersection tests per ray.
+[PathTracer] Job completed.
+real 124.64
+user 1460.70
+sys 1.58
+=== pathtracer -t 12 -s 1024 -l 4 -m 4 -o 1 -R 1 -r 480 360 -f docs/images/part4_bunny_rr_m4_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x1057db040 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1057db300 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1057dccf0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1057db340 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1057db380 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1057dd4f0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1057dd7c0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0095 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 494090315 rays.
+[PathTracer] Average speed 3.1426 million rays per second.
+[PathTracer] Averaged 8.420251 intersection tests per ray.
+[PathTracer] Job completed.
+real 157.34
+user 1841.84
+sys 2.72
+=== pathtracer -t 12 -s 1024 -l 4 -m 100 -o 1 -R 1 -r 480 360 -f docs/images/part4_bunny_rr_m100_1024.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x10180ac40 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x10180d900 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x10180d940 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x10180dee0 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x10180db60 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x10180dda0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x10180de20 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0098 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 674758397 rays.
+[PathTracer] Average speed 3.8964 million rays per second.
+[PathTracer] Averaged 7.180310 intersection tests per ray.
+[PathTracer] Job completed.
+real 173.29
+user 1935.59
+sys 9.61
+=== pathtracer -t 12 -s 1 -l 4 -m 5 -r 480 360 -f docs/images/part4_bunny_spp1_l4.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x103bc6a20 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x103bc7160 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x103bc89c0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x103bc8960 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x103bc87e0 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x103bc8ab0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x103bc8b20 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0009 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0100 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 602941 rays.
+[PathTracer] Average speed 4.1842 million rays per second.
+[PathTracer] Averaged 7.283681 intersection tests per ray.
+[PathTracer] Job completed.
+real 0.26
+user 1.75
+sys 0.01
+=== pathtracer -t 12 -s 2 -l 4 -m 5 -r 480 360 -f docs/images/part4_bunny_spp2_l4.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x1052ceba0 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1052d1a50 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1052d2340 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1052d1f60 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1052d1e80 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1052d2b40 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1052d2e10 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0096 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 1185598 rays.
+[PathTracer] Average speed 4.1532 million rays per second.
+[PathTracer] Averaged 7.298391 intersection tests per ray.
+[PathTracer] Job completed.
+real 0.39
+user 3.41
+sys 0.01
+=== pathtracer -t 12 -s 4 -l 4 -m 5 -r 480 360 -f docs/images/part4_bunny_spp4_l4.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x102c1aee0 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x102c1cb00 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x102c1cb40 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x102c1d060 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x102c1cce0 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x102c1cf20 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x102c1e020 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 2389366 rays.
+[PathTracer] Average speed 4.2016 million rays per second.
+[PathTracer] Averaged 7.221100 intersection tests per ray.
+[PathTracer] Job completed.
+real 0.67
+user 6.74
+sys 0.01
+=== pathtracer -t 12 -s 8 -l 4 -m 5 -r 480 360 -f docs/images/part4_bunny_spp8_l4.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x1055f6fa0 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x1055f9540 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x1055f9580 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x1055f99c0 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x1055f9a80 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1055f9ac0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1055fa8d0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0010 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0095 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 5181717 rays.
+[PathTracer] Average speed 4.1368 million rays per second.
+[PathTracer] Averaged 6.666880 intersection tests per ray.
+[PathTracer] Job completed.
+real 1.36
+user 14.57
+sys 0.05
+=== pathtracer -t 12 -s 16 -l 4 -m 5 -r 480 360 -f docs/images/part4_bunny_spp16_l4.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x102ccefc0 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x102cd1540 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x102cd1ad0 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x102cd18f0 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x102cd1830 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x102cd1a50 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x102cd26b0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0009 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0094 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 9681671 rays.
+[PathTracer] Average speed 4.0416 million rays per second.
+[PathTracer] Averaged 7.203748 intersection tests per ray.
+[PathTracer] Job completed.
+real 2.50
+user 28.03
+sys 0.04
+=== pathtracer -t 12 -s 64 -l 4 -m 5 -r 480 360 -f docs/images/part4_bunny_spp64_l4.png dae/sky/CBbunny.dae ===
+[PathTracer] Input scene file: dae/sky/CBbunny.dae
+[COLLADA Parser] Loading COLLADA file...
+[COLLADA Parser] Loading scene...
+[COLLADA Parser]  |- Node: Mesh (id:Mesh)
+[COLLADA Parser]   |- PolymeshInfo: Mesh (id:Mesh-mesh) [ num_polygons=28576 num_vertices=14290 num_normals=14336 num_texcoords=0 ]
+[COLLADA Parser]   |- MaterialInfo: Default (id:Default-material) [ BSDF=0x103262fa0 ]
+[COLLADA Parser]  |- Node: Camera (id:Camera)
+[COLLADA Parser]   |- CameraInfo: Camera (id: Camera-camera) [ hfov=49.1343 vfov=28.8415 nclip=0.1 fclip=100 ]
+[COLLADA Parser]  |- Node: Area (id:Area)
+[COLLADA Parser]   |- LightInfo: Light (id:Area-light) [ type=area spectrum=(10,10,10) direction=(0,0,-1) ]
+[COLLADA Parser]  |- Node: ceiling (id:ceiling)
+[COLLADA Parser]   |- PolymeshInfo: ceiling (id:ceiling-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: ceiling (id:ceiling-material) [ BSDF=0x103265540 ]
+[COLLADA Parser]  |- Node: light (id:light)
+[COLLADA Parser]   |- PolymeshInfo: light (id:light-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: light (id:light-material) [ BSDF=0x103265580 ]
+[COLLADA Parser]  |- Node: floor (id:floor)
+[COLLADA Parser]   |- PolymeshInfo: floor (id:floor-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: floor (id:floor-material) [ BSDF=0x103265e10 ]
+[COLLADA Parser]  |- Node: leftWall (id:leftWall)
+[COLLADA Parser]   |- PolymeshInfo: leftWall (id:leftWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: leftWall (id:leftWall-material) [ BSDF=0x103265e50 ]
+[COLLADA Parser]  |- Node: rightWall (id:rightWall)
+[COLLADA Parser]   |- PolymeshInfo: rightWall (id:rightWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: rightWall (id:rightWall-material) [ BSDF=0x1032666e0 ]
+[COLLADA Parser]  |- Node: backWall (id:backWall)
+[COLLADA Parser]   |- PolymeshInfo: backWall (id:backWall-mesh) [ num_polygons=2 num_vertices=4 num_normals=2 num_texcoords=6 ]
+[COLLADA Parser]   |- MaterialInfo: backWall (id:backWall-material) [ BSDF=0x1032669b0 ]
+[PathTracer] Rendering using 12 threads
+[PathTracer] Collecting primitives... Done! (0.0008 sec)
+[PathTracer] Building BVH from 28588 primitives... Done! (0.0117 sec)
+[PathTracer] Rendering... 
+[PathTracer] BVH traced 44590856 rays.
+[PathTracer] Average speed 3.6944 million rays per second.
+[PathTracer] Averaged 6.543883 intersection tests per ray.
+[PathTracer] Job completed.
+real 12.18
+user 125.71
+sys 0.91
+ALL PART 4 RENDERS COMPLETE

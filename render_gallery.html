@@ -1,0 +1,161 @@
+<title>CS 184 Homework 3 — Render Contact Sheet</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --void: #0B0B0E;
+  --well: #0B0B0E;
+  --page: #F7F5F1;
+  --panel: #FFFFFF;
+  --rule: #DDD8CF;
+  --ink: #1C1A17;
+  --ink-soft: #6A6459;
+  --accent: #9A7B22;
+  --red: #B2524F;
+  --blue: #5B5BA8;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0E0E12;
+    --panel: #15151A;
+    --rule: #2A2A32;
+    --ink: #E8E6E1;
+    --ink-soft: #908A7E;
+    --accent: #F5E9C8;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #0E0E12;
+  --panel: #15151A;
+  --rule: #2A2A32;
+  --ink: #E8E6E1;
+  --ink-soft: #908A7E;
+  --accent: #F5E9C8;
+}
+:root[data-theme="light"] {
+  --page: #F7F5F1;
+  --panel: #FFFFFF;
+  --rule: #DDD8CF;
+  --ink: #1C1A17;
+  --ink-soft: #6A6459;
+  --accent: #9A7B22;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px 96px; }
+
+header.masthead {
+  padding: 72px 0 36px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+h1 {
+  font-family: var(--mono);
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+.lede { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 16px; }
+
+nav.jump {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: 6px;
+  padding: 12px 0;
+  background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 8px;
+}
+nav.jump a {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+  color: var(--ink-soft); text-decoration: none;
+  padding: 6px 11px; border: 1px solid var(--rule); border-radius: 2px;
+}
+nav.jump a:hover, nav.jump a:focus-visible { color: var(--ink); border-color: var(--ink-soft); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+section.part { padding-top: 56px; }
+.part-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+h2 {
+  font-family: var(--mono); font-size: 20px; font-weight: 600;
+  letter-spacing: -0.01em; margin: 0;
+}
+.part-note { margin: 0; color: var(--ink-soft); font-size: 14px; }
+
+h3 {
+  font-family: var(--mono);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 40px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.grid { display: grid; gap: 18px; }
+.grid.pair   { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid.series { grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); }
+.grid.strip  { grid-template-columns: repeat(auto-fill, minmax(212px, 1fr)); }
+
+figure { margin: 0; display: flex; flex-direction: column; gap: 9px; }
+.well {
+  display: block;
+  background: var(--well);
+  border: 1px solid var(--rule);
+  line-height: 0;
+  overflow: hidden;
+}
+.well img { width: 100%; height: auto; display: block; }
+.well:hover { border-color: var(--accent); }
+figcaption { display: flex; flex-direction: column; gap: 3px; }
+.cap-name { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.cap-cmd {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-soft);
+  font-variant-numeric: tabular-nums; word-break: break-word;
+}
+
+.pending {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 4 / 3; background: var(--panel);
+  border: 1px dashed var(--rule);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+
+footer {
+  margin-top: 72px; padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 11px; color: var(--ink-soft);
+}
+</style>
+<div class="wrap">
+<header class="masthead">
+  <span class="eyebrow">CS 184/284A · Homework 3 · Path Tracer</span>
+  <h1>Render contact sheet</h1>
+  <p class="lede">Every image saved by the renderer so far, grouped by the comparison it is
+  meant to support. Click any frame to open it at full size. Frames marked
+  <em>rendering</em> are still queued.</p>
+</header>
+<nav class="jump"><a href="#part5">Part 5</a><a href="#part4">Part 4</a><a href="#part3">Part 3</a><a href="#part2">Part 2</a><a href="#part1">Part 1</a></nav>
+<section class="part" id="part5"><div class="part-head"><h2>Part 5 — Adaptive Sampling</h2><p class="part-note">Samples concentrated where the image is still noisy. In the rate images blue is a pixel that converged early, red one that spent its whole budget.</p></div><h3>CBbunny — 2048 max samples, 1 light ray, depth 5</h3><div class="grid pair"><figure><a class="well" href="part5_bunny_adaptive.png" target="_blank" rel="noopener"><img src="part5_bunny_adaptive.png" alt="Rendered result" loading="lazy"></a><figcaption><span class="cap-name">Rendered result</span><span class="cap-cmd">-s 2048 -a 64 0.05 -l 1 -m 5</span></figcaption></figure><figure><a class="well" href="part5_bunny_adaptive_rate.png" target="_blank" rel="noopener"><img src="part5_bunny_adaptive_rate.png" alt="Sampling rate" loading="lazy"></a><figcaption><span class="cap-name">Sampling rate</span><span class="cap-cmd">696 avg samples/px</span></figcaption></figure></div><h3>CBspheres_lambertian — 2048 max samples, 1 light ray, depth 5</h3><div class="grid pair"><figure><a class="well" href="part5_spheres_adaptive.png" target="_blank" rel="noopener"><img src="part5_spheres_adaptive.png" alt="Rendered result" loading="lazy"></a><figcaption><span class="cap-name">Rendered result</span><span class="cap-cmd">-s 2048 -a 64 0.05 -l 1 -m 5</span></figcaption></figure><figure><a class="well" href="part5_spheres_adaptive_rate.png" target="_blank" rel="noopener"><img src="part5_spheres_adaptive_rate.png" alt="Sampling rate" loading="lazy"></a><figcaption><span class="cap-name">Sampling rate</span><span class="cap-cmd">850 avg samples/px</span></figcaption></figure></div><h3>The same budget without adaptive sampling</h3><div class="grid pair"><figure><a class="well" href="part5_bunny_fixed2048.png" target="_blank" rel="noopener"><img src="part5_bunny_fixed2048.png" alt="Fixed 2048 samples" loading="lazy"></a><figcaption><span class="cap-name">Fixed 2048 samples</span><span class="cap-cmd">-s 2048 -l 1 -m 5</span></figcaption></figure><figure><a class="well" href="part5_bunny_adaptive.png" target="_blank" rel="noopener"><img src="part5_bunny_adaptive.png" alt="Adaptive, same budget" loading="lazy"></a><figcaption><span class="cap-name">Adaptive, same budget</span><span class="cap-cmd">-s 2048 -a 64 0.05</span></figcaption></figure></div></section><section class="part" id="part4"><div class="part-head"><h2>Part 4 — Global Illumination</h2><p class="part-note">Indirect light: every bounce past the first.</p></div><h3>Global illumination at 1024 samples/pixel</h3><div class="grid series"><figure><a class="well" href="part4_gi_bunny_1024.png" target="_blank" rel="noopener"><img src="part4_gi_bunny_1024.png" alt="CBbunny" loading="lazy"></a><figcaption><span class="cap-name">CBbunny</span><span class="cap-cmd">-s 1024 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_gi_spheres_1024.png" target="_blank" rel="noopener"><img src="part4_gi_spheres_1024.png" alt="CBspheres_lambertian" loading="lazy"></a><figcaption><span class="cap-name">CBspheres_lambertian</span><span class="cap-cmd">-s 1024 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_gi_dragon_1024.png" target="_blank" rel="noopener"><img src="part4_gi_dragon_1024.png" alt="dragon" loading="lazy"></a><figcaption><span class="cap-name">dragon</span><span class="cap-cmd">-s 1024 -l 4 -m 5 -r 480 480</span></figcaption></figure></div><h3>Direct versus indirect illumination</h3><div class="grid pair"><figure><a class="well" href="part4_bunny_direct_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_direct_1024.png" alt="Direct only" loading="lazy"></a><figcaption><span class="cap-name">Direct only</span><span class="cap-cmd">-m 1 -o 1</span></figcaption></figure><figure><a class="well" href="part4_bunny_indirect_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_indirect_1024.png" alt="Indirect only" loading="lazy"></a><figcaption><span class="cap-name">Indirect only</span><span class="cap-cmd">-m 5 -o 1 -I</span></figcaption></figure></div><h3>Isolated bounces — the m-th bounce alone</h3><div class="grid strip"><figure><a class="well" href="part4_bunny_isolated_m0_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_isolated_m0_1024.png" alt="m = 0" loading="lazy"></a><figcaption><span class="cap-name">m = 0</span><span class="cap-cmd">-m 0 -o 0 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_isolated_m1_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_isolated_m1_1024.png" alt="m = 1" loading="lazy"></a><figcaption><span class="cap-name">m = 1</span><span class="cap-cmd">-m 1 -o 0 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_isolated_m2_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_isolated_m2_1024.png" alt="m = 2" loading="lazy"></a><figcaption><span class="cap-name">m = 2</span><span class="cap-cmd">-m 2 -o 0 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_isolated_m3_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_isolated_m3_1024.png" alt="m = 3" loading="lazy"></a><figcaption><span class="cap-name">m = 3</span><span class="cap-cmd">-m 3 -o 0 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_isolated_m4_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_isolated_m4_1024.png" alt="m = 4" loading="lazy"></a><figcaption><span class="cap-name">m = 4</span><span class="cap-cmd">-m 4 -o 0 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_isolated_m5_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_isolated_m5_1024.png" alt="m = 5" loading="lazy"></a><figcaption><span class="cap-name">m = 5</span><span class="cap-cmd">-m 5 -o 0 -R 0</span></figcaption></figure></div><h3>Accumulated bounces — every bounce up to m</h3><div class="grid strip"><figure><a class="well" href="part4_bunny_accum_m0_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_accum_m0_1024.png" alt="m = 0" loading="lazy"></a><figcaption><span class="cap-name">m = 0</span><span class="cap-cmd">-m 0 -o 1 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_accum_m1_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_accum_m1_1024.png" alt="m = 1" loading="lazy"></a><figcaption><span class="cap-name">m = 1</span><span class="cap-cmd">-m 1 -o 1 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_accum_m2_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_accum_m2_1024.png" alt="m = 2" loading="lazy"></a><figcaption><span class="cap-name">m = 2</span><span class="cap-cmd">-m 2 -o 1 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_accum_m3_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_accum_m3_1024.png" alt="m = 3" loading="lazy"></a><figcaption><span class="cap-name">m = 3</span><span class="cap-cmd">-m 3 -o 1 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_accum_m4_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_accum_m4_1024.png" alt="m = 4" loading="lazy"></a><figcaption><span class="cap-name">m = 4</span><span class="cap-cmd">-m 4 -o 1 -R 0</span></figcaption></figure><figure><a class="well" href="part4_bunny_accum_m5_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_accum_m5_1024.png" alt="m = 5" loading="lazy"></a><figcaption><span class="cap-name">m = 5</span><span class="cap-cmd">-m 5 -o 1 -R 0</span></figcaption></figure></div><h3>Russian roulette termination</h3><div class="grid strip"><figure><a class="well" href="part4_bunny_rr_m0_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_rr_m0_1024.png" alt="m = 0" loading="lazy"></a><figcaption><span class="cap-name">m = 0</span><span class="cap-cmd">-m 0 -o 1 -R 1</span></figcaption></figure><figure><a class="well" href="part4_bunny_rr_m1_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_rr_m1_1024.png" alt="m = 1" loading="lazy"></a><figcaption><span class="cap-name">m = 1</span><span class="cap-cmd">-m 1 -o 1 -R 1</span></figcaption></figure><figure><a class="well" href="part4_bunny_rr_m2_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_rr_m2_1024.png" alt="m = 2" loading="lazy"></a><figcaption><span class="cap-name">m = 2</span><span class="cap-cmd">-m 2 -o 1 -R 1</span></figcaption></figure><figure><a class="well" href="part4_bunny_rr_m3_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_rr_m3_1024.png" alt="m = 3" loading="lazy"></a><figcaption><span class="cap-name">m = 3</span><span class="cap-cmd">-m 3 -o 1 -R 1</span></figcaption></figure><figure><a class="well" href="part4_bunny_rr_m4_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_rr_m4_1024.png" alt="m = 4" loading="lazy"></a><figcaption><span class="cap-name">m = 4</span><span class="cap-cmd">-m 4 -o 1 -R 1</span></figcaption></figure><figure><a class="well" href="part4_bunny_rr_m100_1024.png" target="_blank" rel="noopener"><img src="part4_bunny_rr_m100_1024.png" alt="m = 100" loading="lazy"></a><figcaption><span class="cap-name">m = 100</span><span class="cap-cmd">-m 100 -o 1 -R 1</span></figcaption></figure></div><h3>Samples per pixel, four light rays</h3><div class="grid strip"><figure><a class="well" href="part4_bunny_spp1_l4.png" target="_blank" rel="noopener"><img src="part4_bunny_spp1_l4.png" alt="1 spp" loading="lazy"></a><figcaption><span class="cap-name">1 spp</span><span class="cap-cmd">-s 1 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_bunny_spp2_l4.png" target="_blank" rel="noopener"><img src="part4_bunny_spp2_l4.png" alt="2 spp" loading="lazy"></a><figcaption><span class="cap-name">2 spp</span><span class="cap-cmd">-s 2 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_bunny_spp4_l4.png" target="_blank" rel="noopener"><img src="part4_bunny_spp4_l4.png" alt="4 spp" loading="lazy"></a><figcaption><span class="cap-name">4 spp</span><span class="cap-cmd">-s 4 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_bunny_spp8_l4.png" target="_blank" rel="noopener"><img src="part4_bunny_spp8_l4.png" alt="8 spp" loading="lazy"></a><figcaption><span class="cap-name">8 spp</span><span class="cap-cmd">-s 8 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_bunny_spp16_l4.png" target="_blank" rel="noopener"><img src="part4_bunny_spp16_l4.png" alt="16 spp" loading="lazy"></a><figcaption><span class="cap-name">16 spp</span><span class="cap-cmd">-s 16 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_bunny_spp64_l4.png" target="_blank" rel="noopener"><img src="part4_bunny_spp64_l4.png" alt="64 spp" loading="lazy"></a><figcaption><span class="cap-name">64 spp</span><span class="cap-cmd">-s 64 -l 4 -m 5</span></figcaption></figure><figure><a class="well" href="part4_bunny_spp1024_l4.png" target="_blank" rel="noopener"><img src="part4_bunny_spp1024_l4.png" alt="1024 spp" loading="lazy"></a><figcaption><span class="cap-name">1024 spp</span><span class="cap-cmd">-s 1024 -l 4 -m 5</span></figcaption></figure></div></section><section class="part" id="part3"><div class="part-head"><h2>Part 3 — Direct Illumination</h2><p class="part-note">One bounce of light, two ways to estimate it.</p></div><h3>CBbunny — 64 spp, 32 light rays</h3><div class="grid pair"><figure><a class="well" href="part3_bunny_hemisphere_64_32.png" target="_blank" rel="noopener"><img src="part3_bunny_hemisphere_64_32.png" alt="Uniform hemisphere" loading="lazy"></a><figcaption><span class="cap-name">Uniform hemisphere</span><span class="cap-cmd">-s 64 -l 32 -m 6 -H</span></figcaption></figure><figure><a class="well" href="part3_bunny_importance_64_32.png" target="_blank" rel="noopener"><img src="part3_bunny_importance_64_32.png" alt="Light sampling" loading="lazy"></a><figcaption><span class="cap-name">Light sampling</span><span class="cap-cmd">-s 64 -l 32 -m 6</span></figcaption></figure></div><h3>CBspheres_lambertian — 64 spp, 32 light rays</h3><div class="grid pair"><figure><a class="well" href="part3_spheres_hemisphere_64_32.png" target="_blank" rel="noopener"><img src="part3_spheres_hemisphere_64_32.png" alt="Uniform hemisphere" loading="lazy"></a><figcaption><span class="cap-name">Uniform hemisphere</span><span class="cap-cmd">-s 64 -l 32 -m 6 -H</span></figcaption></figure><figure><a class="well" href="part3_spheres_importance_64_32.png" target="_blank" rel="noopener"><img src="part3_spheres_importance_64_32.png" alt="Light sampling" loading="lazy"></a><figcaption><span class="cap-name">Light sampling</span><span class="cap-cmd">-s 64 -l 32 -m 6</span></figcaption></figure></div><h3>Soft-shadow noise versus light rays, one camera sample</h3><div class="grid strip"><figure><a class="well" href="part3_bunny_light_s1_l1.png" target="_blank" rel="noopener"><img src="part3_bunny_light_s1_l1.png" alt="1 light ray" loading="lazy"></a><figcaption><span class="cap-name">1 light ray</span><span class="cap-cmd">-s 1 -l 1 -m 1</span></figcaption></figure><figure><a class="well" href="part3_bunny_light_s1_l4.png" target="_blank" rel="noopener"><img src="part3_bunny_light_s1_l4.png" alt="4 light rays" loading="lazy"></a><figcaption><span class="cap-name">4 light rays</span><span class="cap-cmd">-s 1 -l 4 -m 1</span></figcaption></figure><figure><a class="well" href="part3_bunny_light_s1_l16.png" target="_blank" rel="noopener"><img src="part3_bunny_light_s1_l16.png" alt="16 light rays" loading="lazy"></a><figcaption><span class="cap-name">16 light rays</span><span class="cap-cmd">-s 1 -l 16 -m 1</span></figcaption></figure><figure><a class="well" href="part3_bunny_light_s1_l64.png" target="_blank" rel="noopener"><img src="part3_bunny_light_s1_l64.png" alt="64 light rays" loading="lazy"></a><figcaption><span class="cap-name">64 light rays</span><span class="cap-cmd">-s 1 -l 64 -m 1</span></figcaption></figure></div><h3>Other direct-lighting renders</h3><div class="grid series"><figure><a class="well" href="part3_dragon_importance_64_32.png" target="_blank" rel="noopener"><img src="part3_dragon_importance_64_32.png" alt="dragon" loading="lazy"></a><figcaption><span class="cap-name">dragon</span><span class="cap-cmd">-s 64 -l 32 -m 6 -r 480 480</span></figcaption></figure><figure><a class="well" href="part3_bunny_zerobounce.png" target="_blank" rel="noopener"><img src="part3_bunny_zerobounce.png" alt="Zero bounce only" loading="lazy"></a><figcaption><span class="cap-name">Zero bounce only</span><span class="cap-cmd">-s 16 -l 8 -m 0</span></figcaption></figure></div></section><section class="part" id="part2"><div class="part-head"><h2>Part 2 — Bounding Volume Hierarchy</h2><p class="part-note">Normal shading on scenes too large to brute force.</p></div><h3>BVH-accelerated renders</h3><div class="grid series"><figure><a class="well" href="part2_cow.png" target="_blank" rel="noopener"><img src="part2_cow.png" alt="cow — 5,856 primitives" loading="lazy"></a><figcaption><span class="cap-name">cow — 5,856 primitives</span><span class="cap-cmd">75.2x speedup</span></figcaption></figure><figure><a class="well" href="part2_beetle.png" target="_blank" rel="noopener"><img src="part2_beetle.png" alt="beetle — 7,558 primitives" loading="lazy"></a><figcaption><span class="cap-name">beetle — 7,558 primitives</span><span class="cap-cmd">77.1x speedup</span></figcaption></figure><figure><a class="well" href="part2_banana.png" target="_blank" rel="noopener"><img src="part2_banana.png" alt="banana — 2,458 primitives" loading="lazy"></a><figcaption><span class="cap-name">banana — 2,458 primitives</span><span class="cap-cmd">24.2x speedup</span></figcaption></figure><figure><a class="well" href="part2_maxplanck.png" target="_blank" rel="noopener"><img src="part2_maxplanck.png" alt="maxplanck — 50,801 primitives" loading="lazy"></a><figcaption><span class="cap-name">maxplanck — 50,801 primitives</span><span class="cap-cmd">0.0435 s render</span></figcaption></figure><figure><a class="well" href="part2_lucy.png" target="_blank" rel="noopener"><img src="part2_lucy.png" alt="CBlucy — 133,796 primitives" loading="lazy"></a><figcaption><span class="cap-name">CBlucy — 133,796 primitives</span><span class="cap-cmd">0.0595 s render</span></figcaption></figure></div></section><section class="part" id="part1"><div class="part-head"><h2>Part 1 — Ray Generation and Intersection</h2><p class="part-note">Camera rays, triangles, spheres, normal shading.</p></div><h3>First renders</h3><div class="grid series"><figure><a class="well" href="part1_empty.png" target="_blank" rel="noopener"><img src="part1_empty.png" alt="CBempty" loading="lazy"></a><figcaption><span class="cap-name">CBempty</span><span class="cap-cmd">-s 4 -t 1</span></figcaption></figure><figure><a class="well" href="part1_spheres.png" target="_blank" rel="noopener"><img src="part1_spheres.png" alt="CBspheres_lambertian" loading="lazy"></a><figcaption><span class="cap-name">CBspheres_lambertian</span><span class="cap-cmd">-s 4 -t 1</span></figcaption></figure><figure><a class="well" href="part1_banana.png" target="_blank" rel="noopener"><img src="part1_banana.png" alt="banana" loading="lazy"></a><figcaption><span class="cap-name">banana</span><span class="cap-cmd">-s 4 -t 1</span></figcaption></figure></div></section>
+<footer>54 of 54 renders saved · 480 &times; 360 unless noted · generated by docs/make_gallery.py</footer>
+</div>
